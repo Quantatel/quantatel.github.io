@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Quantatel</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<link href="css/slide_large_inner.css" rel="stylesheet" type="text/css" />
+
+
+
+<style>
+* {
+margin:0;
+padding:0;
+}
+html,body {
+height:100%;
+}
+
+div_acc {
+width:250px;
+background:#fff;
+border-radius:5px;
+-webkit-box-shadow:0 1px 3px rgba(0,0,0,.3);
+box-shadow:0 1px 3px rgba(0,0,0,.3);
+}
+p {
+height:0;
+padding:0 15px;
+overflow:hidden;
+-webkit-transition:height .4s ease-out, padding .4s ease-out;
+-moz-transition:height .4s ease-out, padding .4s ease-out;
+-o-transition:height .4s ease-out, padding .4s ease-out;
+-ms-transition:height .4s ease-out, padding .4s ease-out;
+transition:height .4s ease-out, padding .4s ease-out;
+}
+section a {
+display:block;
+height:23px;
+line-height:23px;
+background:-webkit-gradient(
+  linear, 0 0, 0 100%,
+  from(#eee), to(#ccc)
+);
+background:-moz-linear-gradient(#eee, #ccc);
+background:-o-linear-gradient(#eee, #ccc);
+background:-ms-linear-gradient(#eee, #ccc);
+background:linear-gradient(#eee, #ccc);
+color:#333;
+text-decoration:none;
+text-align:center;
+text-shadow:0 1px 0 rgba(255,255,255,.5);
+border-bottom:1px solid #aaa;
+}
+#overview {
+border-radius:2px 2px 0 0;
+}
+#payment {
+border-radius:0 0 3px 3px;
+}
+section a:hover, a:focus {
+opacity:.9;
+}
+section a:active {
+background:-webkit-gradient(
+  linear, 0 0, 0 100%,
+  from(#ccc), to(#ddd)
+);
+background:-moz-linear-gradient(#ccc, #ddd);
+background:-o-linear-gradient(#ccc, #ddd);
+background:-ms-linear-gradient(#ccc, #ddd);
+background:linear-gradient(#ccc, #ddd);
+color:#000;
+}
+:target + p {
+padding:10px 15px;
+border-bottom:1px solid #ccc;
+}
+#payment:target {
+border-radius:0;
+}
+
+#overview:target + p {
+height:550px;
+}
+#features:target + p {
+height:340px;
+} 
+#payment:target + p {
+height:480px;
+}
+</style>
+
+
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<link href="css/style_panel.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".btn-slide").click(function(){
+    $("#panel").slideToggle("slow");
+        $("#form-contact").hide("fast");
+        $("#form-contact").fadeIn("slow");		
+    
+    $(this).toggleClass("active"); return false;
+});
+
+ 
+});
+</script>
+
+
+<script src="js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script src="js/jcarousellite_inner.js" type="text/javascript"></script>
+<script src="js/jquery.twitter.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+
+
+<link href="css/tipsy.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+<script type="text/javascript" src="js/superfish-menu/superfish.js"></script>
+<script type="text/javascript" src="js/kwicks/jquery.kwicks-1.5.1.pack.js"></script>
+<script type="text/javascript" src="js/mosaic/mosaic.1.0.1.js"></script>
+<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/colorpicker-color.js"></script>
+<script type="text/javascript" src="js/switcher/tabslide.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+$(function() {
+$(window).scroll(function() {
+    if($(this).scrollTop() != 0) {
+        $('#toTop').fadeIn();	
+    } else {
+        $('#toTop').fadeOut();
+    }
+});
+
+$('#toTop').click(function() {
+    $('body,html').animate({scrollTop:0},800);
+});	
+});
+</script>
+
+<link href="css/tabs.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+//Default Action
+$(".tab_content").hide(); //Hide all content
+$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+$(".tab_content:first").show(); //Show first tab content
+
+//On Click Event
+$("ul.tabs li").click(function() {
+    $("ul.tabs li").removeClass("active"); //Remove any "active" class
+    $(this).addClass("active"); //Add "active" class to selected tab
+    $(".tab_content").hide(); //Hide all tab content
+    var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+    $(activeTab).fadeIn(); //Fade in the active content
+    return false;
+});
+
+});
+</script>
+
+<link href="css/jquery-tabs.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-tabs.js"></script>
+
+<script>	
+$(document).ready(function() {
+
+    $('#horizontal_tab').Tabs();
+    
+    $('#xy').Tabs({
+        'direction' : 'vertical'
+    });
+    
+});	
+</script>
+
+<script>	
+$(document).ready(function() {
+
+    $('#horizontal_tab').Tabs();
+    
+    $('#xy2').Tabs({
+        'direction' : 'vertical'
+    });
+    
+});	
+</script>
+<!-- Google Tracking --> 
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34030241-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+<body>
+
+<div id="toTop">^ Back to Top</div>
+
+
+<div id="container">
+<div class="quote_container">
+<div class="quote_top">
+<div align="right"><a href="mailto:sales@quantatel.com"><img src="images/quote.png" alt="quote" border="0" /></a></div>
+</div>
+</div>
+<div id="header">
+<div class="header">
+
+  <div class="logo"><a href="index.html"><img src="images/Quantatel_logo.jpg" width="259" height="51" /></a></div>
+  
+  
+  <div class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <div class="line"></div>
+     <li><a href="./2/portfolio.html">Portfolio</a></li>
+      <div class="line"></div>
+      <li><a href="services.html">Services</a></li>
+      <div class="line"></div>
+      <li><a href="about.html">About us</a></li>
+      <!--  <div class="line"></div>
+      <li><a href="success_stories.html">Success Stories</a></li> -->
+      <div class="line"></div>
+      <li><a href="./2/contact_us.html">Contact us</a></li>
+        <div class="line"></div>
+          <li><a href="http://support.quantatel.com/">Support</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+<div id="header_img" style="background-color:#CA7F0C">
+
+<div id="header_text_img">
+
+  <div class="header_bg_img">
+  
+    <div class="title_header">About us</div>
+    
+    
+    
+    <div class="data_header">We are a group of dedicated young professionals who aims to make a difference in the mobile industry, by providing creative and dynamic solutions to the world to make it a digitalized space. </div>
+  </div>
+</div>
+
+</div>
+
+
+<div id="content">
+
+  <div id="content_img_inner">
+  
+    <div class="tab_container">
+    <div style="display: block;" id="tab1" class="tab_content">
+      <ul id="xy">
+        
+        <li><label><img src="images/arrow_content.png" alt="arrow" />&nbsp; Who are we ?</label>
+        
+        <div class="title_tabs">Who are we ?</div>
+        
+        <div id="img_data_tabs">
+        
+            <div class="img_tabs"><img src="images/img_about_2.jpg" width="235" height="200" class="img_curve_big" /></div>
+            
+            
+            <div class="data_tabs">
+              <div align="justify">
+              We are a group of dedicated young professionals who aims to make a difference in the mobile industry, by providing creative and dynamic solutions to the world to make it a digitalized space.  
+                  
+                <br />
+                <br />
+                
+                <strong>How we see it!                    </strong><br />
+                We at Quantatel have tailored made solution to satisfy our clients’ needs, wants and business requirements, by adding value to the user through adding flexibility, creativity, enhanced efficiency, functionality and personality to mobile apps.<br /> 
+When talking about mobile applications there are two types: Apps that are meant to directly generate income and apps that are built for purposes of marketing, branding and customer services.<br /> 
+When talking about SMS services we make it easier for our clients to portray their information, while we use strategies to help in branding and transmitting the info to people who wants to hear it.<br />
+                <br />
+<strong>How we work ?</strong><br />
+Quick –Confidential-Quality-Transparency-Measurement-Cost-Efficacy
+<br />
+</div>
+            </div>
+        </div>
+        
+        
+        </li>
+        
+        <li><label><img src="images/arrow_content.png" alt="arrow" />&nbsp; Why us ? </label>
+        
+        <div class="title_tabs">Why us ?</div>
+        
+        <div id="img_data_tabs">
+        
+            <div class="img_tabs"><img src="images/img_about_1.jpg" width="235" height="200" class="img_curve_big" /></div>
+            
+            
+            <div class="data_tabs">
+              <div align="justify">
+              
+
+Our solutions are customized to each clients need to meet their requirements, while we use the top notch technologies to make sure we deliver effectively and efficiently. 
+<br />
+We work to a range of key performance indicators (KPIs) that keep us focused on the things that really count which is the client outcome that is why we keep our KPI’s clear to our clients so they can monitor the performance and its equivalence to the business requirements.  
+<br />
+Whether its mobile apps or SMS services we help in connecting people to information, entertainment, and technology and to the whole world!                  
+
+
+
+<br />
+<br />
+<strong>The Technology…</strong><br />
+As we are embracing the new technologies, the time has come for mobility to dominate the sphere of new technologies and applications. While we work with top-notch technologies to keep on top of the digital sphere, and provide quality-based services.
+<br />
+<br />
+<strong> The Philosophy…</strong> <br />
+While the telecom industry is being exceedingly competitive, we at Quantatel believe that to stay on the peak we have to provide efficient solutions to the industry, clients and users. The key to maintain high positions is by keeping up with the velocity of the field’s development. 
+<br />
+<br />
+<strong>The Rationale…</strong> <br />
+It’s all about providing creative solutions to go above and beyond to meet and exceed the needs of the clients and the whole industry. Whether it’s by developing mobile applications, or providing messaging services, we at Quantatel are pleasured to be a key player in providing value to build the telecom industry.
+            </div>
+        </div>
+        
+        </li>      
+        
+        <li><label><img src="images/arrow_content.png" alt="arrow" />&nbsp; Why Mobility?</label>
+        
+        <div class="title_tabs">Why Mobility?</div>
+        
+        <div id="img_data_tabs">
+        
+            <div class="img_tabs"><img src="images/img_about_3.jpg" width="235" height="200" class="img_curve_big" /></div>
+            
+            
+            <div class="data_tabs">
+              <div align="justify">
+It’s time to Go Mobile! It’s time to go mobile with your business/brand. Leading brands went mobile from 5 years. Brands who fail to go Mobile are slowly killing their brand, by not keeping up with new technologies. 
+No matter what is your business type, Entertainment? Multimedia. Education. Healthcare. Travel and regardless your size, GOING MOBILE IS A MUST!
+
+<br />
+<br />
+The number of Mobile users is drastically increasing in the MENA region that is why you need to go where the customers are. Mobility can drive your sales, opens new business opportunities and deliver exceptional customer support, and build your brand image and thus enhancing your identity. 
+
+<br />
+<br />
+<strong>What will Mobile add to your business?</strong>  <br />
+•	Enhance your business process 
+<br />
+•	Reduce your operational costs 
+<br />
+•	Increase employee productivity 
+<br />
+•	Engage more customers and empower them
+<br />
+•	Boost your brand performance and position it in the market 
+<br />
+•	Help in increasing your reach and increase sales                  </div>
+            </div>
+        </div></li>
+                   <li><label><img src="images/arrow_content.png" alt="arrow" />&nbsp; Our Clients</label>
+        
+         <div class="title_tabs">Our Clients</div>
+        
+        <div id="img_data_tabs">
+          <div class="data_tabs_sms">
+              <div align="justify">
+
+
+<div class="img_curve">
+<a href="http://www.flagship.co" target="_blank"><img src="images/b1.jpg" alt="Flagship" width="170" height="113" title="Flagship" /></a>
+</div>
+
+<div class="img_curve">
+<a href="http://www.schs.ae" target="_blank"><img src="images/b2.jpg" alt="Sharjah City for Humanitarian Services" width="170" height="113" title="Sharjah City for Humanitarian Services" /></a>
+</div>
+
+<div class="img_curve">
+             <a href="#"><img src="images/b3.jpg" alt="Sharjah Awqaf" width="170" height="113" title="Sharjah Awqaf" /></a>
+</div>
+
+<div class="img_curve">
+<a href="http://www.shjc.info/whoweare/index.html" target="_blank"><img src="images/b4.jpg" alt="Sharjah Charity International" width="170" height="113" title="Sharjah Charity International" /></a>
+</div>
+
+<div class="img_curve">
+<a href="http://www.facebook.com/pages/Sharjah-Charity-International" target="_blank"><img src="images/b5.jpg" alt="UAE BARQ" width="170" height="113" title="UAE BARQ" /></a>
+</div>
+
+<div class="img_curve">
+<a href="#"><img src="images/b6.jpg" alt="RAK Charity" width="170" height="113" title="RAK Charity" /></a>
+</div>
+
+
+<br/>
+              </div>
+            </div>
+        </div>
+        
+        
+        </li>
+        
+        
+  <li>
+      <label><img src="images/arrow_content.png" alt="arrow" />&nbsp; Join the team</label>
+        
+        <div class="title_tabs">Join the team</div>
+        
+        <div id="img_data_tabs">
+        
+            <div class="img_tabs"><img src="images/img_about_1.jpg" width="235" height="200" class="img_curve_big" /></div>
+            
+            
+            <div class="data_tabs">
+              <div align="justify">
+              
+If you want a chance to pursue a professional career in Mobility, then Quantatel is your place, upload your CV and get a chance to join our team! We look for dedication and professionalism <br/>
+email your updated CV and work portfolio to  <a href="mailto:hr@quantatel.com">hr@quantatel.com</a>
+
+            </div>
+        </div>
+        </div>
+        </li>
+        
+    </ul>
+    </div>
+    <div style="display: block;" id="tab2" class="tab_content">
+      
+    </div>
+    
+</div>
+        
+
+     
+  </div>
+</div>
+
+ 
+
+
+
+
+
+<div id="footer">
+
+  <div id="slider_inner">
+
+  
+  <div id="big_slider">
+        
+        
+        
+        <div class="carousel-box">
+        <div class="prev"><a href="#"><img src="images/arrow-left.png" alt="" class="png" /></a></div>
+        <div class="next"><a href="#"><img src="images/arrow-right.png" alt="" class="png" /></a></div>
+        <div class="carousel">
+           <ul>
+             <li><a href="#"><img src="images/sl1.jpg" alt="" width="100" height="99" /></a></li>
+             <li><a href="#"><img src="images/sl2.jpg" alt="" width="100" height="99" /></a></li>
+             <li><a href="#"><img src="images/sl3.jpg" alt="" width="100" height="99" /></a></li>
+             <li><a href="#"><img src="images/sl4.jpg" alt="" width="100" height="99" /></a></li>
+             <li><a href="#"><img src="images/sl5.jpg" alt="" width="100" height="99" /></a></li>
+             <li><a href="#"><img src="images/sl6.jpg" alt="" width="100" height="99" /></a></li>
+             <li><a href="#"><img src="images/sl7.jpg" alt="" width="100" height="99" /></a></li>
+             <li><a href="#"><img src="images/sl8.jpg" alt="" width="100" height="99" /></a></li>
+             
+          </ul>
+        </div>
+     </div>
+        
+    </div>
+  
+  
+  </div>
+
+    <div id="useful_links">
+      <div class="title_links"><span id="ecxOLK_SRC_BODY_SECTION">What we provide</span></div>
+      <div class="title_links">Company</div>
+      <div class="title_links">Get In Touch</div>
+    </div>
+    <div id="footer_sections">
+
+  <div id="section1">
+  
+    <div class="list_link" ><a href="services.html">Mobile App development</a></div>
+    <div class="list_link" ><a href="services.html">Mobile App development</a></div>
+     <div class="list_link" ><a href="http://www.ikhair.net">iKhair , the mobile donation platform</a></div>
+    <div class="list_link" ><a href="success_stories.html">Our Recent success</a></div>
+    <div class="list_link" ><a href="mailto:sales@quantatel.com">Get a Free Quote</a></div>
+  </div>
+  
+  <div id="section2">
+  
+    <div class="list_link"><a href="about.html">Join the team</a></div>
+    <div class="list_link"><a href="about.html">Who we are?</a></div>
+    <div class="list_link"><a href="about.html">Why Mobility?</a></div>
+    <div class="list_link"><a href="about.html">How we work!</a></div>
+    <div class="list_link"><a href="about.html">Our Clients</a></div>
+   
+  </div>
+  
+  <div id="section3">
+  
+    <div class="link_grey">      	   Phone:      <span id="ecxOLK_SRC_BODY_SECTION5">+971 7 207 89 69</span><br />
+    E-mail:      <a href="mailto:sales@quantatel.com">info@quantatel.com</a></div>
+    
+    
+    <div class="social_links">
+    
+      <div class="social_links_name">Follow us on social network</div>
+    
+    <div class="facebook-icon"><a href="http://www.facebook.com/Quantatel" class='social' title='Facebook'><img src="images/1px.png" alt="" width="26px" height="26px" /></a></div>
+    
+    <div class="tweet-icon"><a href="http://www.twitter.com/Quantatel" title='Twitter' target="_blank" class='social'><img src="images/1px.png" alt="" width="26px" height="26px" /></a></div>
+    
+    </div>
+    
+  </div>
+</div>
+
+  <div id="copyrights">
+  
+    <div class="copyrights">© Copyright Quantatel. All Rights Reserved.</div>
+  </div>
+
+</div>
+</div>
+
+
+
+<script>
+var options={ "publisher": "6b45f5b6-024b-4b2a-b38f-4caeeb121e7b", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "linkedin", "email", "sharethis"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+
+
+
+</body>
+
+
+
+</html>
+
+<!-- Localized -->

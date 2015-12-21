@@ -1,0 +1,124 @@
+#innerRightPart_1 {
+	float: left;
+	width: 255px;
+	padding-left: 5px;
+
+}
+#innerRightPart_3 {
+	float: left;
+	width: 501px;
+	background-color: #F8F8FA;
+	border:2px solid #F0F0EE;
+	padding-bottom: 15px;
+	margin-left:15px;
+	margin-top:10px;
+
+}
+#innerRightPart_1Title {
+	padding-top: 5px;
+	text-align: right;
+	padding-right: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #005FAD;
+	padding-bottom: 5px;
+}
+#innerRightPart_1Pic {
+	margin-left: 3px;
+}
+#innerRightPart_1Data {
+	text-align: right;
+	width: 480px;
+	padding-left: 10px;
+	padding-top: 20px;
+	padding-right: 15px;
+}
+
+#innerRightPart_2 {
+	float: left;
+	width: 501px;
+}
+
+#innerRightPart_2Left {
+	float: left;
+	margin-left: 5px;
+}
+#innerRightPart_2LeftData {
+	width: 237px;
+	padding-top: 12px;
+	text-align: right;
+	float: left;
+}
+#innerRightPart_3LeftData {
+	width: 237px;
+	padding-top: 12px;
+	text-align: right;
+	float: left;
+	margin-left:5px;
+}
+
+
+
+#dataInner2Left {
+	float: left;
+	width: 281px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align: right;
+	background-color: #F8F8FA;
+	border:2px solid #F0F0EE;
+
+}
+.stepcarousel{
+	position: relative; /*leave this value alone*/
+	overflow: scroll; /*leave this value alone*/
+}
+.stepcarousel .belt{
+	position: relative; /*leave this value alone*/
+	left: 0px;
+	top: 0px;
+	width: 260px;
+	height: 69px;
+	margin-top: 0px;
+	float: left;
+}
+.stepcarousel .panel{
+	float: left; /*leave this value alone*/
+	overflow: hidden;
+}
+
+.stepcarousel .panel img{
+	margin-left: 15px;
+	height: 69px;
+	width: 69px;
+	border-radius: 8px 8px 8px 8px;
+}
+#galleryb{
+	overflow: hidden;
+	width: 252px;
+	height: 69px;
+	float: left;
+}
+#left-arrw {
+	position: relative;
+	margin-top: 20px;
+	margin-left: 0px;
+	left: 0px;
+	top: 0px;
+	height: 21px;
+	width: 21px;
+	float: left;
+}
+#right-arrw {
+	position: relative;
+	margin-top: 20px;
+	margin-left: 0px;
+	left: 20px;
+	top: -65px;
+	height: 21px;
+	width: 21px;
+	float: right;
+}

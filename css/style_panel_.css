@@ -1,0 +1,195 @@
+﻿a:focus {
+	outline: none;
+}
+
+#full_width{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #999999;
+}
+
+
+#contact {
+	direction:rtl;
+	background-color: #FFFFFF;
+}
+#panel {
+	background-color: #999999;
+	height: 200px;
+	display: none;
+	border-bottom:0;
+	border-top:0;
+	padding-top:15px;
+	clear: both;
+	margin: 0 auto;
+	width: 1000px;
+}
+.slide {
+	margin: 0 auto;
+	padding: 0;
+	width:1060px;
+	background: transparent url('../images/button-contact.png') no-repeat center;
+}
+.btn-slide {
+	background: url('../images/white-arrow.gif') no-repeat 122px -48px;
+	text-align: center;
+	width: 140px;
+	height: 24px;
+	padding: 9px 12px 0 0;
+	display: block;
+	font: bold 120%/100% Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration: none;
+	margin-right:23px;
+}
+.active {
+	background-position: 122px 12px;
+}
+#form-contact {
+	width:1000px;
+	height:200px;
+	background-color: #999999;
+	float: left;
+}
+
+#contact_details{
+	float: left;
+	width: 230px;
+	margin-left: 100px;
+	margin-top: 5px;
+}
+
+.contact_title{
+	font-family: Tahoma;
+	font-size: 30px;
+	font-weight: bold;
+	color: #FFFFFF;
+	float: left;
+	width: 250px;
+	text-align: left;
+}
+
+.address{
+	font-family: Tahoma;
+	font-size: 20px;
+	float: left;
+	width: 230px;
+	margin-top: 35px;
+	color: #FFFFFF;
+	text-align: left;
+}
+
+.telephone{
+	font-family: Tahoma;
+	font-size: 25px;
+	float: left;
+	width: 230px;
+	margin-top: 15px;
+	color: #FFFFFF;
+	text-align: left;
+	font-weight: bold;
+}
+
+.green_line{
+	float: left;
+	height: 116px;
+	width: 1px;
+	margin-left: 30px;
+	background-color: #000000;
+	margin-top: 54px;
+}
+
+#contact_form{
+	float: left;
+	width: 470px;
+	margin-top: 60px;
+	margin-left: 20px;
+}
+
+#name_phone{
+	float: left;
+	width: 470px;
+}
+
+#message_submit{
+	float: left;
+	width: 470px;
+	margin-top: 7px;
+}
+
+.name_title{
+	font-family: Tahoma;
+	font-size: 14px;
+	color: #FFFFFF;
+	float: left;
+	width: 50px;
+}
+
+.textfield{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	float: left;
+	height: 22px;
+	width: 118px;
+	margin-left: 20px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+}
+
+.message_title{
+	font-family: Tahoma;
+	font-size: 14px;
+	color: #FFFFFF;
+	float: left;
+	width: 50px;
+	margin-top: 20px;
+}
+
+.textfield2{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	float: left;
+	height: 62px;
+	width: 306px;
+	margin-left: 20px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+}
+
+.contact_submit{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #666666;
+	background-color: #FFFFFF;
+	float: left;
+	height: 23px;
+	width: 55px;
+	margin-left: 10px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}

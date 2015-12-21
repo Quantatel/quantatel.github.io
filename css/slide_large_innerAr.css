@@ -1,0 +1,79 @@
+.carousel-box {
+	position:relative;
+	width:990px;
+}
+.carousel-box .prev {
+	position:absolute;
+	left:5px;
+	top:48px;
+}
+.carousel-box .next {
+	position:absolute;
+	right:0;
+	top:48px;
+}
+.carousel-box .prev a,
+.carousel-box .next a {
+	cursor:pointer;
+}
+
+.carousel-box .prev a img{
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+.carousel-box .next a img{
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+.carousel-box .carousel {
+	width:1000px;
+	margin-left:40px;
+}
+
+.carousel-box ul {
+	width:950px;
+	float:left;
+}
+
+.carousel-box ul li {
+	width:100px;
+	height:100px;
+	float:left;
+	margin-right:5px;
+	position:relative;
+	padding-left: 10px;
+	padding-top: 5px;
+	
+}
+
+.carousel-box ul li,
+.carousel-box ul li a {
+}
+.carousel-box ul li a {
+	display:inline-block;
+
+}
+
+.carousel-box ul li a img {
+	
+	border-radius: 10px 10px 10px 10px;
+	border: 1px solid #FFFFFF;
+	height: 99px;
+	width: 100px;
+}
