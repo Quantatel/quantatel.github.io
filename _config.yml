@@ -12,7 +12,7 @@ description: >
   We are a group of dedicated young professionals who aims to make
      a difference in the mobile industry, by providing creative and dynamic solutions
      to the world to make it a digitalized space.
-baseurl: "" # the subpath of your site, e.g. /blog
+#baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.quantatel.com" # the base hostname & protocol for your site
 twitter_username: Quantatel
 github_username:  Quantatel
