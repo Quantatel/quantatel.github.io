@@ -7,8 +7,8 @@
         <div class="header-inner">
           <!-- BEGIN LOGO -->
           <img
-            src="{{ site.baseurl }}/assets/images/quantatel-logo.png"
-            height="21" data-src-retina="{{ site.baseurl }}/assets/images/quantatel-logo.png"
+            src="{%if site.baseurl%}{{site.baseurl}}{%endif%}/assets/images/quantatel-logo.png"
+            height="21" data-src-retina="{%if site.baseurl%}{{site.baseurl}}{%endif%}/assets/images/quantatel-logo.png"
             alt="">
           </a>
         </div>
@@ -38,7 +38,7 @@
           <ul class="menu">
             {% for nav_itm in site.navs %}
             <li class="{% if page.url == nav_itm.href %}active current open{%endif%} ">
-              <a href="{{ site.baseurl }}{{nav_itm.href}}" class="{% if nav_itm.style%}btn btn-{{nav_itm.style}} {% endif%}" data-text="{{nav_itm.label}}">{{nav_itm.label}}</a>
+              <a href="{%if site.baseurl%}{{site.baseurl}}{%endif%}{{nav_itm.href}}" class="{% if nav_itm.style%}btn btn-{{nav_itm.style}} {% endif%}" data-text="{{nav_itm.label}}">{{nav_itm.label}}</a>
             </li>
             {% endfor %}
           </ul>

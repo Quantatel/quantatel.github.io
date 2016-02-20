@@ -3,7 +3,7 @@
   <!-- BEGIN IMAGE PARRALAX -->
   <div class="slider-wrapper">
     <div class="background-wrapper" data-swiper-parallax="20%">
-      <div data-pages-bg-image="{{site.baseurl}}{{page.background.image}}" draggable="false" class="background" data-bg-overlay="{{page.background.overlay}}" data-overlay-opacity="0.4"></div>
+      <div data-pages-bg-image="{%if site.baseurl%}{{site.baseurl}}{%endif%}{{page.background.image}}" draggable="false" class="background" data-bg-overlay="{{page.background.overlay}}" data-overlay-opacity="0.4"></div>
     </div>
   </div>
   <!-- END IMAGE PARRALAX -->

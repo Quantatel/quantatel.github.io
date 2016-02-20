@@ -12,7 +12,7 @@
           <h1 class="m-t-5">{{title}}</h1>
         </div>
         <div class="col-sm-7 col-md-8 no-padding xs-p-l-15 xs-p-r-15">
-          <img src="{{site.baseurl}}{{client_image}}" class="image-responsive-height lazy sm-m-t-30" alt="">
+          <img src="{%if site.baseurl%}{{site.baseurl}}{%endif%}{{client_image}}" class="image-responsive-height lazy sm-m-t-30" alt="">
         </div>
       </div>
     </div>

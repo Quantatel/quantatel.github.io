@@ -13,7 +13,7 @@
           <div class="col-md-7">
             <div class="pull-left sm-pull-reset text-center m-t-5">
               {% for osItm in site.data.services.mobile_dev.platforms %}
-                <img class="inline v-align-top m-r-10" height="35" src="{{ site.baseurl }}{{osItm.logo_img}}" alt="{{osItm.subline}}">
+                <img class="inline v-align-top m-r-10" height="35" src="{%if site.baseurl%}{{site.baseurl}}{%endif%}{{osItm.logo_img}}" alt="{{osItm.subline}}">
               {% endfor %}
             </div>
           </div>
@@ -29,7 +29,7 @@
     {% if site.data.services.mobile_dev.image %}
     <div class="row p-t-70">
       <div class="col-md-10 col-md-offset-1">
-        <img class="img-responsive" src="{{ site.baseurl }}{{site.data.services.mobile_dev.image}}" data-pages="float" data-max-top-translate="0" data-max-bottom-translate="40" data-speed="0.1" data-delay="1000" data-curve="ease" alt="" style="transition: transform 1s ease; transform: translateY(-38.7463px);">
+        <img class="img-responsive" src="{%if site.baseurl%}{{site.baseurl}}{%endif%}{{site.data.services.mobile_dev.image}}" data-pages="float" data-max-top-translate="0" data-max-bottom-translate="40" data-speed="0.1" data-delay="1000" data-curve="ease" alt="" style="transition: transform 1s ease; transform: translateY(-38.7463px);">
       </div>
     </div>
     {% endif %}

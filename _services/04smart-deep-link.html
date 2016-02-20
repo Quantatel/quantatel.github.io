@@ -30,7 +30,7 @@ CTA:
     <p>{{page.brief}}</p>
   </div>
   <div class="col-md-12 text-right sm-text-center">
-    <a href="{{site.baseurl}}{{page.CTA.link|default:'#'}}" class="btn btn-{{page.CTA.style|default:'white'}} pull-right sm-pull-reset  m-l-20  sm-m-t-20">{{page.CTA.btn_title}}</a>
+    <a href="{%if site.baseurl%}{{site.baseurl}}{%endif%}{{page.CTA.link|default:'#'}}" class="btn btn-{{page.CTA.style|default:'white'}} pull-right sm-pull-reset  m-l-20  sm-m-t-20">{{page.CTA.btn_title}}</a>
     {% if page.CTA.brief %}
     <p class="font-arial pull-right sm-pull-reset small hint-text sm-m-t-10 sm-no-padding">
       {{page.CTA.brief}}
