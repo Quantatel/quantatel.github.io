@@ -1,0 +1,55 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Quantatel
+email: mg@quantatel.com
+description: >
+  We are a group of dedicated young professionals who aims to make
+     a difference in the mobile industry, by providing creative and dynamic solutions
+     to the world to make it a digitalized space.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.quantatel.com" # the base hostname & protocol for your site
+twitter_username: Quantatel
+github_username:  Quantatel
+
+# Build settings
+markdown: kramdown
+
+collections:
+  - slides
+  - services
+  - portfolio
+  - testimonials
+
+
+defaults:
+  -
+    scope:
+      path: "/"
+      type: "portfolio"
+    values:
+      layout: "portfolio_tabs"
+
+navs:
+  - label: Home
+    href: /
+  - label: Services
+    href: /services/
+  - label: Portfolio
+    href: /portfolio/
+  - label: Contact Us
+    href: /contact-us/
+  # - label: We Are Hiring
+  #   href: /jobs/
+  #   style: warning
+
+formspree:
+  action_email: sales@quantatel.com
+  message:
+    success: Your Message was Sent successfully
+    error: Something went wrong please try again later

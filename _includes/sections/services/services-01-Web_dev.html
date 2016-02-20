@@ -1,0 +1,53 @@
+---
+layout: section_imgleft
+header: Mobilizing Your Business<br/> is Our Mission
+image:
+  alt: 
+  url: "/assets/images/bg/apple-iphone-technology-white.jpg"
+---
+
+
+<!-- BEGIN CONTENT -->
+<section class="bg-master-lightest p-t-40 p-b-75 text-center">
+  <div class="container container-fixed-lg">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>{{site.data.services.web_dev.title}}</h1>
+        <p class="p-t-20 p-b-20">{{site.data.services.web_dev.brief}}</p>
+        <br>
+        <br>
+        <div class="row">
+          {% for hl in site.data.services.web_dev.highlights %}
+          <div class="col-sm-4 text-center sm-m-b-30">
+            <h5 class="block-title m-b-5">{{hl.title}}</h5>
+            <h5 class="no-margin {%if forloop.last == false %}b-r{% endif %} b-grey sm-no-border p-t-10 p-b-5">{{hl.tagline}}</h5>
+            {%if hl.ps %}<p class="fs-14 hint-text">{{hl.ps}}</p>{%endif%}
+          </div>
+          {% endfor %}
+        </div>
+        {% comment %}
+        <div class="row m-t-100">
+          <div class="col-sm-4 col-sm-2 no-padding">
+            <div class="p-r-40 md-p-r-30 xs-no-padding text-center">
+              <img alt="" class="m-b-20" src="assets/images/Parachute.svg">
+              <h6 class="block-title p-b-5">
+                Launch Design <i class="pg-arrow_right m-l-10"></i></h6>
+              {% comment %}
+              <p class="m-b-30">Awesome notepad app. It gives you a quick and simple notepad editing experience when you write notes.</p>
+              <p class="muted font-arial small-text col-sm-9 col-sm-offset-2 no-padding">Icon Fonts, Vector SVG's, pages 14x14px vector icons.</p>
+              {% endcomment %}
+            </div>
+            <div class="visible-xs b-b b-grey-light m-t-30 m-b-30"></div>
+          </div>
+        </div>
+        {% endcomment %}
+      </div>
+    </div>
+  </div>
+</section>
+{% if site.data.services.web_dev.image %}
+<section class="text-center">
+  <img src="{{site.data.services.web_dev.image}}" alt="" class="image-responsive-width sm-image-responsive-height lazy">
+</section>
+{% endif %}
+<!-- END CONTENT -->

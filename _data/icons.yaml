@@ -1,0 +1,20 @@
+ios:
+  logo: /assets/images/logo-ios.png
+  enterprise_app: '/assets/images/ios-in-house-icon.png'
+  store:
+    black: '/assets/images/banner-on_the_app_store-black.png'
+android:
+  logo: /assets/images/logo-android.png
+  store:
+    black: /assets/images/google-play-badge.png
+windows:
+  logo: /assets/images/logo-windows.png
+blackberry:
+  logo: /assets/images/logo-blackbery.png
+  store:
+    black: /assets/images/banner-bb_world-black.png
+symbian:
+  logo: /assets/images/logo-symbian-type.png
+web:
+  store:
+    black: /assets/images/available-on-web-logo.png

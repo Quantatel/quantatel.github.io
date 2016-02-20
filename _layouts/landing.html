@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% include jumbotron.html %}
+
+{% include sections/about/about-01.html %}
+{% include sections/about/about-02.html %}
+
+{% for service in site.services %}
+  {{ service }}
+{% endfor %}
+
+{% include clients.html %}

@@ -1,0 +1,47 @@
+<!-- END TESTIMONIALS -->
+<section class="p-b-85 p-t-75 ">
+  <!-- BEGIN TESTIMONIALS SLIDER -->
+  <div class="swiper-container  swiper-container-horizontal">
+    <div class="swiper-wrapper">
+      {% for testimoni in site.testimonials %} {{testimoni}} {% endfor %}
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-pagination relative p-t-20"></div>
+  </div>
+  <!-- END TESTIMONIALS SLIDER -->
+</section>
+<!-- BEGIN TESTIMONIALS -->
+
+{% comment %}
+<h3 class="text-center">
+  Given our emphasis on operational efficiency and optimization.
+</h3>
+<img alt="" src="assets/images/signature_sample.png">
+{% endcomment %}
+
+<style media="screen">
+  .swiper-pagination-bullet {
+    transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+    transition-duration: 0ms;
+    -webkit-transition-duration: 0ms;
+  }
+</style>
+
+<script type="text/javascript">
+  document.addEventListener( 'DOMContentLoaded', function () {
+      console.log('DOMContentLoaded')
+      var swiper = new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          paginationClickable: true,
+          autoplay: 2500,
+          autoplayDisableOnInteraction: false,
+          onSlideChangeEnd: function(swiper){
+            console.log('swiper>>', swiper);
+            var idx = swiper.activeIndex+1;
+            $('.swiper-pagination .swiper-pagination-bullet-active').removeClass('swiper-pagination-bullet-active');
+            $('.swiper-pagination .swiper-pagination-bullet:nth-child('+idx.toString()+')').addClass('swiper-pagination-bullet-active');
+          }
+      });
+  }, false );
+</script>

@@ -1,0 +1,121 @@
+<form role="form" autocomplete="off" class="m-t-15" id="contact-form">
+  <div class="row">
+    <div class="alert hidden" role="alert">
+      <i class="fa "></i><span></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group form-group-default">
+        <label>First name</label>
+        <input type="text" name="name" class="form-control">
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group form-group-default">
+        <label>Last name</label>
+        <input type="text" name="last-name" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group form-group-default required">
+    <label>Email</label>
+    <input type="email" name="_replyto" placeholder="So we contact you" class="form-control" required>
+  </div>
+  <div class="form-group form-group-default required">
+    <label>Subject</label>
+    <input type="text" name="_subject" placeholder=" " class="form-control" required>
+  </div>
+  <div class="form-group form-group-default required">
+    <label>Message</label>
+    <textarea name="message" placeholder="Type the message you wish to send" style="height:100px" class="form-control" required></textarea>
+  </div>
+  <div class="sm-p-t-10 clearfix">
+    <p class="pull-left small hint-text m-t-5 font-arial">{{site.data.contact.webform.postxt}}</p>
+    <button type="submit" id="contact-form-submit" class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">
+      <i class="fa fa-spinner fa-pulse fa-spin hidden"></i>
+      {{site.data.contact.webform.submit}}
+    </button>
+  </div>
+  <div class="clearfix"></div>
+  <input type="text" name="_gotcha" style="display:none" />
+  {%if site.formspree.next %}
+    <input type="text" type="hidden" name="_next" value="//site.io/thanks.html" />
+  {%endif%}
+</form>
+
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+  $('form#contact-form').submit(function(e) {
+
+    // return false so form submits through jQuery rather than reloading page.
+    if (e.preventDefault) e.preventDefault();
+    else e.returnValue = false;
+
+    // serialize all the data in the form
+    var data = $('form#contact-form').serialize();
+
+
+    $.ajax({
+      url: "//formspree.io/{{site.formspree.action_email}}",
+      method: "POST",
+      data: data,
+      dataType: "json",
+      beforeSend: function( xhr ) {
+         $('#contact-form-submit i').removeClass('hidden');
+      },
+      success: function(data) {
+        console.log('success');
+        console.log(data);
+
+        $('#contact-form-submit i')
+          .removeClass('fa-spinner fa-pulse fa-spin');
+          // .addClass('fa-check');
+
+        // $('#contact-form-submit')
+        //     .removeClass('btn-primary')
+        //     .addClass('btn-success');
+
+        $('form#contact-form').find("input, textarea").val("");
+
+        $('form#contact-form .alert i')
+          .addClass('fa-check');
+
+        $('form#contact-form .alert span')
+          .text('&nbsp;&nbsp;{{site.formspree.message.success}}');
+
+        $('form#contact-form .alert')
+          .addClass('alert-success')
+          .removeClass('hidden');
+      },
+      error: function(data) {
+        console.log('error');
+        console.log(data);
+
+        $('#contact-form-submit i')
+          .removeClass('fa-spinner fa-pulse fa-spin');
+          // .addClass('fa-exclamation-triangle');
+
+        // $('#contact-form-submit')
+        //   .removeClass('btn-primary')
+        //   .addClass('btn-danger');
+
+        $('form#contact-form .alert i')
+          .addClass('fa-exclamation-triangle');
+
+        $('form#contact-form .alert span')
+          .text('&nbsp;&nbsp;{{site.formspree.message.error}}');
+
+        $('form#contact-form .alert')
+          .addClass('alert-danger')
+          .removeClass('hidden');
+
+      }
+    });
+
+    return false;
+
+  });
+});
+</script>

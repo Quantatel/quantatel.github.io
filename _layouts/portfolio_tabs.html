@@ -1,0 +1,68 @@
+<div class="tab-pane m-t-70 {%if page.inital %}active{%endif%}" id="{{page.slug}}">
+  <div class="md-p-l-20 md-p-r-20 xs-no-padding">
+    <h5 class="block-title hint-text no-margin">{{page.pretitle}}</h5>
+    <div class="row">
+      <div class="col-sm-5">
+        {% if page.home %}
+          <h1 class="m-t-5 m-b-20">
+            <a href="{{page.home}}" target="_blank">{{page.name}} | {{content}}</a>
+          </h1>
+        {% else %}
+          <h1 class="m-t-5 m-b-20">
+            {{page.name}}
+          </h1>
+        {% endif %}
+        <p class="m-b-20">{{page.brief}}</p>
+        {%if page.client %}
+        <h6 class="block-title  hint-text fs-12">
+          <span>beneficiary </span><br/>
+          <a  href="{{page.client.home}}"
+              target="_blank"
+              style="text-transform: capitalize;">
+            {{page.client.name}}
+          </a>
+        </h6>
+        {% endif %}
+        {% if page.platforms %}
+        <div class="pull-left sm-pull-reset !-text-center m-t-5">
+          <p class="hint-text font-arial small-text no-padding">
+            {%if page.enterprise_app %}
+              Enterprise Published
+            {% else %}
+            Available on
+            {% endif %}
+          </p>
+          {% for trgt in page.platforms %}
+            {% if page.enterprise_app %}
+              <img class="inline v-align-top m-r-10" height="40" src="{{site.data.icons.[trgt.type].logo}}" alt="{{trgt.type}}">
+            {% else %}
+              <a href="{{trgt.link}}" target="_blank">
+                <img class="inline v-align-top m-r-10 m-b-10" height="40" src="{{site.data.icons.[trgt.type].store.black}}" alt="{{trgt.type}}">
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <div class="col-sm-7 no-padding xs-p-l-15 xs-p-r-15">
+        <div class="content-mask-md">
+          {% if page.main_image %}
+          <div class="device_morph pull-center-inner" style="transform: translateY(-100px);">
+            <img alt="" class="xs-image-responsive-height image-responsive-width pull-right" src="{{page.main_image}}">
+          </div>
+          {% endif %}
+          {% comment %}
+          <div class="device_morph pull-center-inner" id="iphone01" data-pages="float" data-max-top-translate="40" data-max-bottom-translate="300" data-speed="-0.1" data-delay="1000" data-curve="ease" style="transition: transform 1s ease; transform: translateY(39.7692px);">
+            <img alt="" class="xs-image-responsive-height image-responsive-width" src="assets/images/b_phone.png">
+            <div class="screen">
+              <div class="iphone-border">
+                <img src="assets/images/mobile_preview.jpg" class="image-responsive-height lazy loaded" alt="">
+              </div>
+            </div>
+          </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

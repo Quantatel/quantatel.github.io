@@ -1,0 +1,43 @@
+<!-- Mobile Deveploment Section  -->
+<section class="bg-master-lighter p-b-60 p-t-60 sm-p-b-30">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center">
+        <h1 class="m-t-5">{{site.data.services.mobile_dev.title}}</h1>
+        <p>{{site.data.services.mobile_dev.brief}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="pull-left sm-pull-reset text-center m-t-5">
+              {% for osItm in site.data.services.mobile_dev.platforms %}
+                <img class="inline v-align-top m-r-10" height="35" src="{{ site.baseurl }}{{osItm.logo_img}}" alt="{{osItm.subline}}">
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-md-5 text-right sm-text-center">
+            <button class="btn btn-white pull-right sm-pull-reset sm-m-t-20">{{site.data.services.mobile_dev.CTA.btn_title}}</button>
+            <p class="font-arial pull-right sm-pull-reset p-r-20 small hint-text sm-m-t-10 sm-no-padding">
+              {{site.data.services.mobile_dev.CTA.brief}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if site.data.services.mobile_dev.image %}
+    <div class="row p-t-70">
+      <div class="col-md-10 col-md-offset-1">
+        <img class="img-responsive" src="{{ site.baseurl }}{{site.data.services.mobile_dev.image}}" data-pages="float" data-max-top-translate="0" data-max-bottom-translate="40" data-speed="0.1" data-delay="1000" data-curve="ease" alt="" style="transition: transform 1s ease; transform: translateY(-38.7463px);">
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- <section id="demo-content-3" class="jumbotron p-b-60 p-t-70 relative no-overflow bg-master-lighter" style="min-height: 450px !important;">
+
+</section> -->
+
+<!-- End Mobile Deveploment Section  -->

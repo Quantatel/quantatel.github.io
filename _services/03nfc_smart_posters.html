@@ -1,0 +1,39 @@
+---
+layout: section/img_left
+
+in_portfolio: true
+images:
+  section:
+    alt: NFC Smart Posters
+    url: /assets/images/bg/nfc-smart-posters.png
+title: NFC Smart Posters
+brief: >
+  NFC posters turns your booth, boxes and posters to interactive ones your
+   clients/visitors can tap their mobiles to your posters to Send SMS,
+    like your FB page, email, download your contact card.
+
+CTA:
+  # style: #options:  link, primary, success, complete, info, warning, danger, rounded default: white
+  style: complete
+  btn_title: 'Get A Quote'
+  link: /contact-us/
+  # brief: >
+  #   Two Call to action promoting<br>
+  #   lines ... action (Get A Quote)
+
+
+---
+
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1 text-center">
+    <h1 class="m-t-5">{{page.title}}</h1>
+    <p>{{page.brief}}</p>
+    <div class="row text-right sm-text-center">
+      <a href="{{site.baseurl}}{{page.CTA.link|default:'#'}}" class="btn btn-{{page.CTA.style|default:'white'}} pull-right sm-pull-reset  m-l-20  sm-m-t-20">{{page.CTA.btn_title}}</a>
+      {% if page.CTA.brief %}
+      <p class="font-arial pull-right sm-pull-reset small hint-text sm-m-t-10 sm-no-padding">
+        {{page.CTA.brief}}
+      </p>
+      {% endif %}
+  </div>
+</div>

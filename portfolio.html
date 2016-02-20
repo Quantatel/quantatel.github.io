@@ -1,0 +1,70 @@
+---
+layout: default
+title: Our Portfolio
+permalink: /portfolio/
+portfolio: true
+
+services_header: >
+  We also Offer an Array of
+  <br/>
+  Home Crafted Serivces
+
+---
+
+<section style="margin-top: 200px;padding-bottom: 10px !important;">
+  <div class="container">
+    <div class="md-p-l-20 md-p-r-20 xs-no-padding">
+      <div class="row">
+        <div class="col-sm-5 col-md-4">
+          <h5 class="block-title hint-text no-margin">{{page.pretitle}}</h5>
+        </div>
+      </div>
+      <div class="row" style="border-bottom: 1px #cdcdcd solid;">
+        <div class="col-sm-5 col-md-4">
+          <h1 class="m-t-5">{{page.title}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% for app in site.portfolio %}
+  {% if app.published %}
+    {% capture app.name %}Portfolio{% endcapture %}
+    <section class="p-b-85 p-t-75">
+      <div class="container">
+        <div class="row">
+          {{app}}
+        </div>
+    </section>
+  {% endif %}
+{% endfor %}
+
+<!-- BEGIN FOOTER -->
+<section class="p-b-50 p-t-50 bg-master-lighter">
+  <div class="container p-b-50 p-t-50">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="text-center">
+        {% comment %}<img src="assets/images/Skewdriver.svg" alt="">{% endcomment %}
+        <div class="text-center">
+          <h1 class="text-black col-sm-12 p-b-10">
+            {{page.services_header}}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- END FOOTER -->
+
+{% for app in site.services %}
+  {% if app.in_portfolio %}
+  <section class="p-b-85 p-t-75">
+    <div class="container">
+      <div class="row">
+        {{app}}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,65 @@
+---
+layout: default
+title: Contact us
+permalink: /contact-us/
+---
+
+<div class="m-t-60">
+  <!-- START CONTACT SECTION -->
+  <section class="container container-fixed-lg p-t-65 p-b-100  sm-p-b-30 sm-m-b-30">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>{{site.data.contact.webform.header}}</h2>
+        <div class="p-r-40 sm-p-r-0">
+          <p>{{site.data.contact.webform.brief}}</p>
+          <br>
+          <br>
+          <div class="panel" id="contact-panel">
+            <p class="semi-bold no-margin">{{site.data.contact.webform.pretxt}}</p>
+            {% include contact_form_spree.html %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="visible-xs visible-sm b-b b-grey-light m-t-35 m-b-30"></div>
+        <div class="p-l-40 sm-p-l-0 sm-p-t-10">
+          <h3>{{site.data.contact.contact_page.header}}</h3>
+          <p>{{site.data.contact.contact_page.brief}}</p>
+          <br/><br/>
+          <div class="col-md-offset-1">
+
+            {% for addr in site.data.contact.contact_info %}
+            <div class="row">
+              <div class="!-col-sm-{{12|divided_by:forloop.length|ceil}}">
+                <h5 class="block-title hint-text m-b-0">{{addr.title}}</h5>
+                <address class="m-t-10">
+                  {%for st in addr.address %}
+                    {{st}}<br/>
+                  {% endfor %}
+                </address>
+                <br>
+                {%for pn in addr.phone %}
+                  <p class="hint-text no-margin">
+                    <abbr title="{{pn.type|capitalize}}" class="fs-12 font-montserrat bold all-caps p-r-10">
+                      <i class="fa fa-{{pn.type}}"></i>
+                    </abbr>
+                    <span class="fs-14">&nbsp;{{pn.number}}</span>
+                  </p>
+                {% endfor %}
+                {% for ex in addr.extra_contact  %}
+                  <div class="col-sm-6">
+                    <p class="fs-12 font-montserrat bold all-caps no-margin hint-text">{{ex.title}} </p>
+                    <p class="hint-text no-margin fs-14">{{ex.contact}}</p>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END CONTACT SECION -->
+</div>

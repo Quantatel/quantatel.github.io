@@ -1,0 +1,59 @@
+---
+layout: section/img_right
+
+images:
+  section:
+    alt: Quantatel Mobile Development
+    url: /assets/images/bg/mobile-devices.png
+title: Mobile Apps Development
+brief: >
+  Mobile applications give a unique and valued touch to boost the
+   performance & functions of mobile devices. All mobile
+    platforms has their own set of features that require technical
+     finesse to meet both individual and business needs.
+
+platforms:
+  - type: ios
+    subline: 'iOS App Development'
+    logo_img: /assets/images/logo-ios.png
+  - type: android
+    subline: 'Android App Development'
+    logo_img: /assets/images/logo-android.png
+  - type: windows
+    subline: 'Windows App Development'
+    logo_img: /assets/images/logo-windows.png
+
+CTA:
+  style: complete
+  btn_title: 'Get A Quote'
+  link: /contact-us/
+  # brief: >
+  #   Two Call to action promoting<br>
+  #   lines ... action (Get A Quote)
+
+
+---
+
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1 text-center">
+    <h1 class="m-t-5">{{page.title}}</h1>
+    <p>{{page.brief}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="pull-left sm-pull-reset text-center m-t-5">
+      {% for osItm in page.platforms %}
+        <img class="inline v-align-top m-r-10" height="25" src="{{ site.baseurl }}{{osItm.logo_img}}" alt="{{osItm.subline}}">
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-md-6 text-right sm-text-center">
+    <a href="{{site.baseurl}}{{page.CTA.link|default:'#'}}" class="btn btn-{{page.CTA.style|default:'white'}} pull-right sm-pull-reset  m-l-20  sm-m-t-20">{{page.CTA.btn_title}}</a>
+    {% if page.CTA.brief %}
+    <p class="font-arial pull-right sm-pull-reset small hint-text sm-m-t-10 sm-no-padding">
+      {{page.CTA.brief}}
+    </p>
+    {% endif %}
+  </div>
+</div>

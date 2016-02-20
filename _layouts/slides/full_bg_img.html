@@ -1,0 +1,38 @@
+<!-- BEGIN SLIDE -->
+<div class="swiper-slide fit bg-complete">
+  <!-- BEGIN IMAGE PARRALAX -->
+  <div class="slider-wrapper">
+    <div class="background-wrapper" data-swiper-parallax="20%">
+      <div data-pages-bg-image="{{site.baseurl}}{{page.background.image}}" draggable="false" class="background" data-bg-overlay="{{page.background.overlay}}" data-overlay-opacity="0.4"></div>
+    </div>
+  </div>
+  <!-- END IMAGE PARRALAX -->
+  <!-- BEGIN CONTENT -->
+  <div class="content-layer">
+    <div class="inner full-height">
+      <div class="container-xs-height full-height">
+        <div class="col-xs-height col-middle text-center">
+          <div class="container sm-m-b-30">
+            <div class="row sm-m-b-30">
+              <div class="col-md-6 col-md-offset-3 p-b-90 sm-p-b-40 sm-m-b-30">
+                {% if page.header %}
+                <h1 class="light text-white sm-no-margin" data-swiper-parallax="-15%">
+                  {{page.header}}
+                </h1>
+                {% endif %}
+                {% if page.link %}
+                <a href="{{page.link.url}}" target="_blank" class="block-title text-white link {{page.link.classes}}">{{page.link.label}}</a>
+                {% endif %}
+                {% if content %}
+                  {{content}}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END CONTENT -->
+</div>
+<!-- END SLIDE -->

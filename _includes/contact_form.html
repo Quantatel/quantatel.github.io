@@ -1,0 +1,66 @@
+<form role="form" autocomplete="off" class="m-t-15" id="contact-form" action="{{site.data.contact.webform.action}}" method="post">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group form-group-default">
+        <label>First name</label>
+        <input type="text" name="name" class="form-control">
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group form-group-default">
+        <label>Last name</label>
+        <input type="text" name="last-name" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group form-group-default required">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="So we contact you" class="form-control" required>
+  </div>
+  <div class="form-group form-group-default required">
+    <label>Message</label>
+    <textarea name="message" placeholder="Type the message you wish to send" style="height:100px" class="form-control" required></textarea>
+  </div>
+  <div class="sm-p-t-10 clearfix">
+    <p class="pull-left small hint-text m-t-5 font-arial">{{site.data.contact.webform.postxt}}</p>
+    <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">{{site.data.contact.webform.submit}}</button>
+  </div>
+  <div class="clearfix"></div>
+</form>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $('form#contact-form').submit(function(e) {
+
+    // return false so form submits through jQuery rather than reloading page.
+    if (e.preventDefault) e.preventDefault();
+    else e.returnValue = false;
+
+    // serialize all the data in the form
+    var data = $('form#contact-form').serialize();
+
+
+    $.ajax({
+      url: '',
+      data: data,
+      dataType:'json',
+      type:'POST',
+      async:false,
+      success: function(data) { // callback method for further manipulations
+        for (key in data.email) {
+          alert(data.email[key]);
+        }
+
+      },
+      error: function(data) { // if error occured
+
+      }
+    });
+    return false;
+
+  });
+
+});
+</script>
