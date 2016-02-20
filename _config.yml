@@ -26,15 +26,6 @@ collections:
   - portfolio
   - testimonials
 
-
-defaults:
-  -
-    scope:
-      path: "/"
-      type: "portfolio"
-    values:
-      layout: "portfolio_tabs"
-
 navs:
   - label: Home
     href: /
